@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colored Letters</title>
+    <style>
+        .G { color: green; }
+        .R { color: red; }
+        .Y { color: yellow; }
+        .B { color: blue; }
+        .O { color: orange; }
+        body{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        G<br>
+        R<br>
+        Y<br>
+        B<br>
+        O<br>
+        GR<br>
+        GY<br>
+        GB<br>
+        GO<br>
+        RY<br>
+        RB<br>
+        RO<br>
+        YB<br>
+        YO<br>
+        BO<br>
+        GRY<br>
+        GRB<br>
+        GRO<br>
+        GYB<br>
+        GYO<br>
+        GBO<br>
+        RYB<br>
+        RYO<br>
+        RBO<br>
+        YBO<br>
+        GRYB<br>
+        GRYO<br>
+        GRBO<br>
+        GYBO<br>
+        RYBO<br>
+        GRYB
+    </div>
+    <script>
+        document.getElementById('content').innerHTML = document.getElementById('content').innerHTML
+            .replace(/G/g, '<span class="G">G</span>')
+            .replace(/R/g, '<span class="R">R</span>')
+            .replace(/Y/g, '<span class="Y">Y</span>')
+            .replace(/B/g, '<span class="B">B</span>')
+            .replace(/O/g, '<span class="O">O</span>');
+    </script>
+</body>
+</html>
