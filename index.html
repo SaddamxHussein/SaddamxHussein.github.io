@@ -10,54 +10,51 @@
         .Y { color: yellow; }
         .B { color: blue; }
         .O { color: orange; }
-        body{
+        body {
             background-color: black;
+            color: white;
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        .left, .right {
+            flex: 1;
+            padding: 20px;
         }
     </style>
 </head>
 <body>
-    <div id="content">
-        <center>
-        G<br>
-        R<br>
-        Y<br>
-        B<br>
-        O<br>
-        GR<br>
-        GY<br>
-        GB<br>
-        GO<br>
-        RY<br>
-        RB<br>
-        RO<br>
-        YB<br>
-        YO<br>
-        BO<br>
-        GRY<br>
-        GRB<br>
-        GRO<br>
-        GYB<br>
-        GYO<br>
-        GBO<br>
-        RYB<br>
-        RYO<br>
-        RBO<br>
-        YBO<br>
-        GRYB<br>
-        GRYO<br>
-        GRBO<br>
-        GYBO<br>
-        RYBO<br>
-        GRYBO<br>
-        </center>
+    <div class="container">
+        <div class="left">
+            <div class="content">
+                <center>
+                    G<br>R<br>Y<br>B<br>O<br>GR<br>GY<br>GB<br>GO<br>RY<br>RB<br>RO<br>YB<br>YO<br>BO<br>
+                    GRY<br>GRB<br>GRO<br>GYB<br>GYO<br>GBO<br>RYB<br>RYO<br>RBO<br>YBO<br>
+                    GRYB<br>GRYO<br>GRBO<br>GYBO<br>RYBO<br>GRYBO
+                </center>
+            </div>
+        </div>
+        <div class="right">
+            <div class="content">
+                <center>
+                    O<br>B<br>Y<br>R<br>G<br>OB<br>OY<br>OR<br>OG<br>BY<br>BR<br>BG<br>YR<br>YG<br>RG<br>
+                    OBY<br>OBR<br>OBG<br>OYR<br>OYG<br>ORG<br>BYR<br>BYG<br>BRG<br>YRG<br>
+                    OBYR<br>OBYG<br>OBRG<br>OYRG<br>BYRG<br>OBYRG
+                </center>
+            </div>
+        </div>
     </div>
+    
     <script>
-        document.getElementById('content').innerHTML = document.getElementById('content').innerHTML
-            .replace(/G/g, '<span class="G">G</span>')
-            .replace(/R/g, '<span class="R">R</span>')
-            .replace(/Y/g, '<span class="Y">Y</span>')
-            .replace(/B/g, '<span class="B">B</span>')
-            .replace(/O/g, '<span class="O">O</span>');
+        document.querySelectorAll('.content').forEach(content => {
+            content.innerHTML = content.innerHTML
+                .replace(/G/g, '<span class="G">G</span>')
+                .replace(/R/g, '<span class="R">R</span>')
+                .replace(/Y/g, '<span class="Y">Y</span>')
+                .replace(/B/g, '<span class="B">B</span>')
+                .replace(/O/g, '<span class="O">O</span>');
+        });
     </script>
 </body>
 </html>
